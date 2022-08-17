@@ -1,13 +1,15 @@
 import "./ExpenseDisplay.css";
 import ExpenseItem from "./ExpenseItem";
 
+import Card from "./Card";
+
 function ExpenseDisplay(props) {
   return (
-    <div className="expense">
+    <Card className="expense">
       {props.expenseArr.map((i) => (
         <ExpenseItem item={i} />
       ))}
-    </div>
+    </Card>
   );
 }
 
