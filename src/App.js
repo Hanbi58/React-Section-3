@@ -1,4 +1,4 @@
-import ExpenseDisplay from "./components/ExpenseDisplay";
+import ExpenseDisplay from "./components/Functions/ExpenseDisplay";
 
 const expenses = [
   {
@@ -37,11 +37,3 @@ function App() {
 }
 
 export default App;
-
-{
-  /* <h2>Lets Get Started</h2>
-<ExpenseItem props={expenses[0]} />
-<ExpenseItem props={expenses[1]} />
-<ExpenseItem props={expenses[2]} />
-<ExpenseItem props={expenses[3]} /> */
-}
