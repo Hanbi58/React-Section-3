@@ -1,5 +1,7 @@
 import ExpenseDisplay from "./components/Functions/ExpenseDisplay";
 
+import NewExpense from "./components/NewExpense/NewExpense";
+
 const expenses = [
   {
     id: "e1",
@@ -31,6 +33,7 @@ function App() {
   return (
     <div>
       <h2>Let's get started!</h2>
+      <NewExpense />
       <ExpenseDisplay expenseArr={expenses} />
     </div>
   );
