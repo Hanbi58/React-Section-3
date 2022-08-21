@@ -16,8 +16,20 @@ const ExpenseForm = () => {
   const dateChangeHandler = (e) => {
     setEnteredDate(e.target.value);
   };
+
+  const sybmitHandler = (e) => {
+    e.preventDefault();
+
+    const expenseData = {
+      tilte: enteredTitle,
+      amount: enteredAmount,
+      date: new Date(enteredDate).toDateString(),
+    };
+
+    console.log(expenseData);
+  };
   return (
-    <form>
+    <form onSubmit={sybmitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
@@ -48,14 +60,6 @@ const ExpenseForm = () => {
       </div>
       <div className="new-expense__actions">
         <button type="submit">Add Expense</button>
-        <button
-          onClick={(e) => {
-            e.preventDefault();
-            console.log({ enteredTitle }, { enteredAmount }, { enteredDate });
-          }}
-        >
-          Click Me
-        </button>
       </div>
     </form>
   );
