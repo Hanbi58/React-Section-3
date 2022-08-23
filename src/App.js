@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ExpenseDisplay from "./components/Functions/ExpenseDisplay";
 
 import NewExpense from "./components/NewExpense/NewExpense";
@@ -34,6 +35,7 @@ function App() {
     <div>
       <h2>Let's get started!</h2>
       <NewExpense />
+
       <ExpenseDisplay expenseArr={expenses} />
     </div>
   );
